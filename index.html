@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAR Haramain - Layanan Haji & Umroh Nyaman dan Aman</title>
+  <meta name="description" content="RAR Haramain menyediakan layanan perjalanan ibadah Haji dan Umroh yang nyaman, aman, dan profesional. Solusi terbaik untuk kebutuhan perjalanan ibadah Anda.">
+  <meta name="keywords" content="Haji, Umroh, Layanan Haji, Layanan Umroh, Perjalanan Ibadah, Badal Umroh, RAR Haramain, Jemaah Haji, Jemaah Umroh">
+  <meta property="og:title" content="RAR Haramain - Layanan Haji & Umroh Nyaman dan Aman" />
+  <meta property="og:description" content="RAR Haramain menyediakan layanan perjalanan ibadah Haji dan Umroh yang nyaman, aman, dan profesional. Solusi terbaik untuk kebutuhan perjalanan ibadah Anda." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://yourwebsite.com/index.html" />
+  <meta property="og:image" content="http://yourwebsite.com/assets/logo/20250509_105554.jpg" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    background-color: #ffffff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #003049;
+    color: white;
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  .nav-logo cite {
+    font-size: 15px;
+  }
+
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .nav-links a:hover{
+    background-color:  #f77f00;
+    color: #5a2580;
+    transform: translateY(0,0,0,0.3s);
+  }
+  .nav-cta {
+    background: #f77f00;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-cta:hover {
+    background: #d96c00;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Hero */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #003049;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #f77f00;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d96c00;
+  }
+  
+  .hero-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+  }
+  
+  /* Fitur */
+  .fitur {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .fitur h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003049;
+  }
+  
+  .fitur-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .fitur-card {
+    background: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .fitur-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Layanan */
+  .layanan {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .layanan h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003049;
+  }
+  
+  .layanan-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .layanan-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .layanan-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .layanan-item h4 {
+    padding: 1rem;
+    color: #003049;
+  }
+  
+  /* Blog */
+  .blog {
+    padding: 4rem 2rem;
+    background: #ffffff;
+    text-align: center;
+  }
+  
+  .blog h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003049;
+  }
+  
+  .blog-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .blog-post {
+    background: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .blog-post h4 {
+    color: #003049;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-post a {
+    color: #1d00f7;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .blog-post a:hover {
+    text-decoration: underline;
+  }
+  
+  /* CTA */
+  .cta {
+    color: rgb(40, 36, 36);
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Footer */
+  .site-footer {
+    background-color:#12394f;
+    color: #fff;
+    padding: 40px 20px 60px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    width: 69px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 65px;
+  }
+  
+  .footer-social {
+    margin: 15px 0;
+  }
+  
+  .footer-social a {
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 20px;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  .footer-social a:hover {
+    color: #fff;
+  }
+  
+  .footer-line {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 25px auto;
+    width: 80%;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc;
+  }
+  
+  .footer-bottom a {
+    color: #60bff3;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Responsif */
+  @media (max-width: 600px) {
+    .footer-social a {
+      font-size: 18px;
+      margin: 0 6px;
+    }
+  
+    .footer-bottom p {
+      font-size: 10px;
+      padding: 0 10px;
+    }
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background: #003049;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      display: none;
+      padding: 1rem;
+      border-radius: 0 0 0 10px;
+    }
+    .nav-logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    .nav-logo cite {
+      font-size: 15px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-img {
+      margin-top: 2rem;
+    }
+  
+    .fitur-grid, .layanan-grid, .blog-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  </style>
+</head>
+<body class="katalog-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">RAR|<cite>haramain</cite></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../rido akbar/index.html">Beranda</a></li>
+      <li><a href="../rido akbar/pages/About.html">about</a></li>
+      <li><a href="../rido akbar/pages/Edukasi.html">Edukasi</a></li>
+      <li><a href="../rido akbar/pages/badal umroh.html">Badal umroh</a></li>
+      <li><a href="../rido akbar/pages/keunggulan.html">Keunggulan</a></li>
+      <li><a href="../rido akbar/pages/kontak.html">kontak</a></li>
+      <li><a href="#kontak" class="nav-cta">Pesan Sekarang</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Layanan Haji & Umroh Nyaman dan aman</h1>
+      <p>Solusi untuk semua kebutuhan perjalanan ibadah haji & umroh, dan menerima jasa badal umroh</p>
+      <a href="#kontak" class="btn-primary">Pesan Sekarang</a>
+    </div>
+    <div class="hero-img">
+      <img src="../rido akbar/assets/images/IMG-20250506-WA0015.jpg" alt="Jemaah Haji dan Umroh RAR Haramain">
+    </div>
+  </section>
+
+  <!-- Keunggulan -->
+  <section class="fitur" id="fitur">
+    <h2>Kenapa Harus Memilih Rar haramain?</h2>
+    <div class="fitur-grid">
+      <div class="fitur-card">
+        <h3>Profesional</h3>
+        <p>team rar haramain sudah berpengalaman,mengerti seluk beluk mekkah dan madinah,
+            berpengalaman di saudi sejak tahun 2013.
+        </p>
+      </div>
+      <div class="fitur-card">
+        <h3>Respons Cepat</h3>
+        <p>Layanan maksimal,selalu memprioritaskan kenyamanan kondisi jamaah dalam kelangsungan perjalan ibadah haji dan umroh</p>
+      </div>
+      <div class="fitur-card">
+        <h3>Amanah</h3>
+        <p>Jaminan perjalanan sesuai penawaran yang dilakukan oleh perusahaan RAR haramain</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layanan -->
+  <section class="layanan" id="layanan">
+    <h2>kegiatan jemaah umroh</h2>
+    <div class="layanan-grid">
+      <div class="layanan-item">
+        <img src="../rido akbar/assets/images/IMG-20250506-WA0020.jpg" alt="Arahan Jemaah Haji dan Umroh RAR Haramain">
+        <h4>Arahan kepada setiap jemaah sebelum melakukan ibadah atau city tour</h4>
+      </div>
+      <div class="layanan-item">
+        <img src="../rido akbar/assets/images/IMG-20250506-WA0017.jpg" alt="Nasehat untuk Jemaah Haji dan Umroh RAR Haramain">
+        <h4>RAR haramain syarifain selalu memberikan nasehat kepada jemaah umroh agar tetap menjaga hati dalam keikhlasan</h4>
+      </div>
+      <div class="layanan-item">
+        <img src="../rido akbar/assets/images/IMG-20250506-WA0021.jpg" alt="Doa Jemaah Haji dan Umroh RAR Haramain">
+        <h4>berdoa kepada allah di setiap moment penting selama di tanah haram</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Edukasi Blog -->
+  <section class="blog" id="blog">
+    <h2>Kelebihan RAR haramain</h2>
+    <div class="blog-grid">
+      <div class="blog-post">
+        <h4>Memprioritaskan kenyamanan jemaah</h4>
+        <p>ramah,responsif, dan selalu mengarahkan dan mengingatkan jemaah kepada amal sholeh yang bersumber dari alquran dan sunnah</p>
+        <a href="#">Baca Selengkapnya →</a>
+      </div>
+      <div class="blog-post">
+        <h4>Perbedaan AC Inverter & Non-Inverter</h4>
+        <p>Mana yang lebih hemat? Simak kelebihan dan kekurangan dari kedua jenis ini.</p>
+        <a href="../rido akbar/pages/Edukasi.html">Baca Selengkapnya →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta" id="kontak">
+    <h2>Apa anda ingin konsultasi masalah badal umroh?</h2>
+    <p>Hubungi kami sekarang dan nikmati layanan cepat & profesional.</p>
+    <a href="#" class="btn-primary">Hubungi Sekarang</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+  
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="../rido akbar/assets/logo/20250509_105554.jpg" alt="Logo">
+      </div>
+  
+      <!-- Sosial Media -->
+      <div class="footer-social">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+  
+      <!-- Garis horizontal -->
+      <hr class="footer-line">
+  
+      <!-- Copyright & Kontak -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hak Cipta oleh <strong>RAR|haramain syarifain</strong>. Semua Hak Dilindungi.</p>
+        <p>Kontak: <a href="damhuriteknik@gmail.com">ridoakbarritonga@gmail.com</a> | Telp: 0812 6706 7700</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
+  </script>
+</body>
+</html>
